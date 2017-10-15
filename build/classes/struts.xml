@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd 
+
+">
+<struts>
+
+	<package name="com" namespace="/" extends="struts-default">
+        <action name="hello" class="com.helloAction">
+            <result>/hello.jsp</result>
+        </action>
+        
+        <action name="pageAction" class="com.PageAction">
+    		<result name="success">/pageDate.jsp</result>
+    		<result name="input">/inputauthor.jsp</result>
+    	</action> 
+    	 
+    	<action name="showthebookAction" class="com.ShowthebookAction">
+    		<result >
+    			/showbook.jsp
+    		</result>
+    	</action>
+    	
+    	<action name="deleteAction" class="com.DeleteAction">
+    		<result name="success" type="redirect">
+    		/pageAction.action?author=${author}
+    		</result>
+    		<result name="input">
+    		/pageAction.action?author=${author}
+    		</result>
+    	</action>
+		
+		<action name="updateAction" class="com.UpdataAction">
+    		<result name="success" type="redirect">
+    		/pageAction.action?author=${author}
+    		</result>
+    		<result name="input">
+    		/pageAction.action?author=${author}
+    		</result>
+    	</action>
+        
+    </package>
+
+</struts>
