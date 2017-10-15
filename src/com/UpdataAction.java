@@ -1,6 +1,6 @@
 package com;
 import com.opensymphony.xwork2.ActionSupport;
-
+//can't update author message
 public class UpdataAction extends ActionSupport {
 	private String title;
 	private String publisher;
